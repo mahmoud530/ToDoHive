@@ -457,6 +457,10 @@ body.dark .sidebar li a:hover .text {
     overflow-y: scroll;
 }
 
+.sidebar .menu-bar .menu .menu-links{
+    padding-left: 0;
+}
+
 .menu-bar::-webkit-scrollbar {
     display: none;
 }
