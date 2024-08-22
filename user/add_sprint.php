@@ -9,12 +9,59 @@ $error="";
 $id=$_SESSION['user_id'];
 // $pid=6;
 // $sprint=1;
-if(isset($_GET['pid'])){
-$pid=$_GET['pid'];
+$sprint_end="";
+$sprint_start="";
+$sprint_name="";
+$edit=false;
 
+if(isset($_GET['sprint_id'])){
+    $edit=true ;
+$pid=$_GET['pid'];
+$sprint_id=$_GET['sprint_id'];
+$select_sprint="SELECT * FROM `sprints` WHERE `sprint_id` =$sprint_id";
+$run_sprint=mysqli_query($connect,$select_sprint);
+$fetch=mysqli_fetch_assoc($run_sprint);
+$sprint_name=$fetch['sprint_name'];
+$sprint_start=$fetch['sprint_start'];
+$sprint_end=$fetch['sprint_end'];
 // $sel="SELECT * FROM `projects_members`  JOIN `users` ON `users`.`user_id` = `projects_members`. `user_id` WHERE `project_id`= $pid ";
 // $run_sel=mysqli_query($connect,$sel);
+if(isset($_POST['update'])){
+    
+    $sprint_name=$_POST['name'];
+    $sprint_start=$_POST['startdate'];
+    $sprint_end=$_POST['enddate'];
+    $sprint_start1=strtotime($sprint_start);
+    $sprint_end1=strtotime($sprint_end);
+    $time=strtotime("yesterday");
+    $end_time=strtotime("+14");
+$diff=$sprint_end1 - $sprint_start1;
+$diff=$diff / (60*60*24);
+if($diff<14 and $diff>31){
+    $error="choose between 14 and 31 days";
+    
+}elseif($sprint_start1 <$time){
+    $error="choose current date";
+    
+}elseif($sprint_end1 <$end_time){
+    $error="choose more than 13 days from today";
+    
+}elseif(empty($sprint_name)){
+    $error="please,put the name";
+}
+else{
+    // $insert="U INTO `sprints` VALUES (NULL, '$sprint_name','$sprint_start','$sprint_end',$pid)";
+    $insert="UPDATE `sprints` SET  `sprint_name` = '$sprint_name' , `sprint_start`='$sprint_start' ,`sprint_end`='$sprint_end'  WHERE `sprint_id`=$sprint_id";
+    $run_insert=mysqli_query($connect,$insert); 
+    header("location:project_details.php?project_id=$pid");
+}
+}
 
+
+
+} 
+if(isset($_GET['pid'])){
+    $pid=$_GET['pid'];
 if(isset($_POST['add'])){
     $sprint_name=$_POST['name'];
     $sprint_start=$_POST['startdate'];
@@ -25,8 +72,7 @@ if(isset($_POST['add'])){
     $end_time=strtotime("+14");
 $diff=$sprint_end1 - $sprint_start1;
 $diff=$diff / (60*60*24);
-// echo $diff;
-if($diff<14 OR $diff>31){
+if($diff<14 and $diff>31){
     $error="choose between 14 and 31 days";
     
 }elseif($sprint_start1 <$time){
@@ -35,15 +81,17 @@ if($diff<14 OR $diff>31){
 }elseif($sprint_end1 <$end_time){
     $error="choose more than 13 days from today";
     
-}else{
+}elseif(empty($sprint_name)){
+    $error="please,put the name";
+
+}
+else{
     $insert="INSERT INTO `sprints` VALUES (NULL, '$sprint_name','$sprint_start','$sprint_end',$pid)";
     $run_insert=mysqli_query($connect,$insert); 
     header("location:project_details.php?project_id=$pid");
 }
 }
-
-} 
-
+}
 ?>
 
 
@@ -78,12 +126,18 @@ if($diff<14 OR $diff>31){
            <?php } ?>
             <form  class="form" method="POST">
                 <div class="heading">Add New Sprint</div>
-                <input required="" class="input" type="text" name="name" id="name"
+                <input  class="input" type="text" name="name" id="name" value="<?php echo $sprint_name ?>"
                     placeholder="name">
-                <input required="" class="input" type="date" name="startdate" id="startdate">
-                <input required="" class="input" type="date" name="enddate" id="enddate">
-    <button type="submit" class="login-button" class="submit" name="add">submit</button>
-            </form>
+                 
+                <input  class="input" type="date" name="startdate" id="startdate" value="<?php echo $sprint_start ?>">
+               
+                <input  class="input" type="date" name="enddate" id="enddate" value="<?php echo $sprint_end ?>">
+                <?php if($edit){ ?>
+                    <button type="submit" class="login-button" class="submit" name="update">update</button>
+   <?php }else{ ?>
+                    <button type="submit" class="login-button" class="submit" name="add">submit</button>
+           <?php }?>
+                    </form>
 
         </div>
 
