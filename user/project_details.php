@@ -547,6 +547,21 @@ Members completed
     <?php } ?>
 
 <?php if(isset($_POST['submit'])) { ?>
+        <div class="main-add " id="add_member">
+        <div class="add_member">
+            <form method="POST">
+                <div class="icon" >
+                    <i class="fa-solid fa-xmark bg-danger" style="color: #080808;" onclick="closeaddmember()"></i>
+                </div> 
+            
+                <h3> <?php echo $error; ?> </h3>
+                
+                <label for="mail">Email</label><br>
+                <input type="email" id="mail" name="email"><br>
+                <button  type="submit" name="submit" >Add Member</button>
+            </form>
+        </div>
+    </div>
     
 
     <?php } ?>
