@@ -55,10 +55,17 @@
         border-bottom-left-radius: 7px;
     }
 
+      .add-btns{
+        display: flex;
+        gap:20px;
+        padding-top: 20px;
+    }
+
     .add-btn {
-        position: absolute;
-        right: 20px;
-        top: 30px;
+        position: relative;
+        width:150px;
+        left: 75%;
+        top: 3%;
         font-size: 15px;
         height: 35px;
         padding: 5px;
@@ -74,46 +81,6 @@
     
         transition: 1s;
     }
-
-.add-btn1 {
-    position: absolute;
-    right: 10px;
-    top: 30px;
-    font-size: 15px;
-    height: 35px;
-    padding: 5px;
-    background-color: var(--primary-color-light);
-    text-decoration: none;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
-    border-radius: 6px;
-
-    transition: 1s;
-
-}
-.add-btn2 {
-    position: absolute;
-    right: 16%;
-    top: 30px;
-    font-size: 15px;
-    height: 35px;
-    padding: 5px;
-    background-color: var(--primary-color-light);
-    text-decoration: none;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
-    border-radius: 6px;
-
-    transition: 1s;
-}
     
 
 body {
@@ -599,7 +566,7 @@ a:focus {
 
 .hehe .del{
     position: relative;
-    left:10%;
+    left:25%;
 }
 
 .logout{
@@ -816,5 +783,4 @@ align-items: center;
     margin: 10px;
     font-size: 25px;
 }
-
 
