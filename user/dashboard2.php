@@ -163,13 +163,13 @@ header("location:dashboard2.php");
 <!-- hena aho a3meli al if  3ala al add w2 al subscribeee -->
 
         <?php if($role_id ==2) {  ?>
-             <a href="subscription.php">Upgrade <span><i class='bx bx-plus icon' style="font-size: 20px;"></i></span></a>
+             <a href="subscription.php" class="add-btn2">Upgrade <span><i class='bx bx-plus icon' style="font-size: 20px;"></i></span></a>
         <a href="add_project.php" class="add-btn">Add Project <span><i class='bx bx-plus icon' style="font-size: 20px;"></i></span></a>
         <!-- <a href="" class="add-btn">Add Project <span>
             <i class='bx bx-plus icon' style="font-size: 20px;"></i> -->
             <?php } else{ ?>
         <!-- </span> </a> -->
-        <a href="subscription.php" class="add-btn">Subscribe <span><i class='bx bx-plus icon' style="font-size: 20px;"></i></span></a>
+        <a href="subscription.php" class="add-btn1">Subscribe <span><i class='bx bx-plus icon' style="font-size: 20px;"></i></span></a>
         <?php  } ?>
         
 
