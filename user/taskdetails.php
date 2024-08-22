@@ -401,9 +401,9 @@ if(isset($_POST['edit'])) {
 
                         <select name="status" id="status" class="status2">
                             <option value="NULL">ٍSelect The Prority</option>
-                            <?php foreach($run_sel_stat as $stats){ ?>
-                            <option value="<?php echo $stats['status_id'] ?>">
-                                <?php echo $stats['status_name'] ?>
+                        <?php foreach($run_sel_pri as $stats){ ?>
+                            <option value="<?php echo $stats['priority_id'] ?>">
+                                <?php echo $stats['priority_name'] ?>
                             </option>
                             <?php } ?>
                         </select>
