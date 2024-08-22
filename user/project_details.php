@@ -16,8 +16,8 @@ if(isset($_GET['project_id'])){
     $name_project=$fetch['project_name'];
 
 $select="SELECT * FROM `projects_members` JOIN `users` ON `projects_members`.`user_id`= `users`.`user_id` WHERE `project_id`=$project_id";
-$run=mysqli_query($connect,$select);
-$number_member=mysqli_num_rows($run);
+$runnn=mysqli_query($connect,$select);
+$number_member=mysqli_num_rows($runnn);
 $select2="SELECT * FROM `projects_members` JOIN `users` ON `projects_members`.`user_id`= `users`.`user_id` WHERE `projects_members`.`project_id`=$project_id AND `projects_members`.`user_id`=$id";
 $run2=mysqli_query($connect,$select2);
 $number_member2=mysqli_num_rows($run2);
@@ -205,7 +205,7 @@ if(isset($_GET['delete'])){
                             </a>
                             <div class="mem-list d-none" id="members">
                                 <ul class="member-list" >
-                                    <?php   foreach($run as $appear) {?>
+                                    <?php   foreach($runnn as $appear) {?>
                                         <div class="memb">
 
                                         <li class="member"><?php echo $appear['user_name'] ?></li>
@@ -547,7 +547,7 @@ Members completed
     <?php } ?>
 
 <?php if(isset($_POST['submit'])) { ?>
-        <div class="main-add " id="add_member">
+    <div class="main-add " id="add_member">
         <div class="add_member">
             <form method="POST">
                 <div class="icon" >
@@ -562,7 +562,6 @@ Members completed
             </form>
         </div>
     </div>
-    
 
     <?php } ?>
 
