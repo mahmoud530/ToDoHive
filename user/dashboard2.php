@@ -161,9 +161,9 @@ header("location:dashboard2.php");
     <section class="home">
 
 <!-- hena aho a3meli al if  3ala al add w2 al subscribeee -->
-
+    <div class="add-btns">
         <?php if($role_id ==2) {  ?>
-             <a href="subscription.php" class="add-btn2">Upgrade <span><i class='bx bx-plus icon' style="font-size: 20px;"></i></span></a>
+             <a href="subscription.php" class="add-btn">Upgrade <span><i class='bx bx-plus icon' style="font-size: 20px;"></i></span></a>
         <a href="add_project.php" class="add-btn">Add Project <span><i class='bx bx-plus icon' style="font-size: 20px;"></i></span></a>
         <!-- <a href="" class="add-btn">Add Project <span>
             <i class='bx bx-plus icon' style="font-size: 20px;"></i> -->
@@ -171,7 +171,7 @@ header("location:dashboard2.php");
         <!-- </span> </a> -->
         <a href="subscription.php" class="add-btn1">Subscribe <span><i class='bx bx-plus icon' style="font-size: 20px;"></i></span></a>
         <?php  } ?>
-        
+        </div>
 
 <!-- 
 
