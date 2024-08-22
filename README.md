@@ -1,11 +1,11 @@
-# download details
+# Download details
 - please upon downloading uncompress these 3 folders
 1. .vscode
 2. images
 3. mail
 - and import the database named case01
 
-# about ToDo Hive
+# About ToDo Hive
 
 - its a Planner website that allows users to work on their projects with their team
 
