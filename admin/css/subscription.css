@@ -1,0 +1,86 @@
+*{padding: 0%;
+margin: 0%;
+box-sizing: border-box;
+}
+:root{
+
+  --body-color: #f4f5f7;
+  --sidebar-color: #fafafa;
+  --primary-color: #165bc5;
+  --primary-color-light: #cbddff;
+  /* --toggle-color: #f9e0b9;
+  --toggle-color1: #f9e0b9; */
+  --text-color: #000000;
+  --primary-color2: #052659;
+  --card-color:#cbddff;
+  --primary-color-light2: #93b7f9;
+
+}
+
+.container-cards{display:flex;
+justify-content: space-evenly;
+align-items: center;
+background-color:  var(--card-color);
+height: 100vh;
+width:100%;
+padding: 60px;
+
+}
+
+.card{
+width: 27% !important;
+display: flex;
+align-items: center;
+border-radius: 20px !important;
+padding: 10px 40px;
+height: 60vh;
+transition: 0.5s;
+
+ 
+
+
+
+ }
+
+ .card-content{text-align: center;}
+
+ h5{font-size: 35px !important;
+padding-bottom: 5px;}
+
+ 
+.sub-btn{
+  margin-inline: 10px;
+  border: none;
+background-color: var(--primary-color2);
+border-radius: 5px;
+padding: 5px;
+transition: 0.4s;
+margin-top: 10px;
+}
+
+.container-cards .card a{text-decoration: none;
+color: white;}
+
+.month{font-size:small;
+opacity: 60%;}
+
+  .card:hover{transform: scale(1.08);
+    box-shadow: 0.3px 0.3px 0.3px 0.3px black;
+}
+
+.sub-btn:hover{background-color:var(--primary-color);}
+
+
+.btnn{
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+background-color: var(--primary-color2);
+border-radius: 5px;
+padding: 5px;
+transition: 0.4s;
+margin-top: 10px;
+color: var(--body-color);
+width: 5%;
+}
