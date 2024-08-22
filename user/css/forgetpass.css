@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+
+:root {
+
+    --body-color: #f4f5f7;
+    --sidebar-color: #fafafa;
+    --primary-color: #165bc5;
+    --primary-color-light: #cbddff;
+    --toggle-color: #f9e0b9;
+    --toggle-color1: #f9e0b9;
+    --text-color: #000000;
+    --primary-color2: #052659;
+    --card-color: #cbddff;
+    --primary-color-light2: #93b7f9;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+
+}
+
+.main {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    width: 60%;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+.img {
+    width: 60vh;
+    font-size: 20vh;
+
+}
+
+.img-div {
+    margin: 0;
+    height: 50%;
+}
+
+.input {
+    width:70%;
+    height: 35px;
+    /* margin: 10px 0; */
+    border-radius: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    font-size: 16px;
+    color: rgb(82, 82, 148);
+    margin-bottom: 15px;
+    padding-inline: 10px;
+    box-shadow: 0px 10px 15px -3px var(--primary-color-light2);    
+}
+input::placeholder{
+    font-size: 15px;
+    text-align: center;
+}
+
+.input:hover {
+    background-color: var(--color5);
+    border: none;
+}
+
+.verification form {
+    text-align: center;
+
+}
+.verification{
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+
+}
+
+.p {
+    text-align: center;
+    color: #3dccc7;
+    font-size: 18px;
+    margin-top: 4px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+}
+
+
+.btn {
+    width: 50%;
+    height: 45px;
+    padding-top: 3px;
+    background-color:var(--primary-color2);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    transition: all 0.5s;
+    text-align: center;
+
+}
+
+.btn:hover {
+    font-size: 20px;
+    font-weight: 620;
+
+}
+
+/* @media(max-width:700px) {
+    .main {
+        width: 90%;
+        height: 100vh;
+        padding: 10px 10px;
+        margin-left: 0px;
+        /* margin-bottom: 50%; */
+
+
+
+/* }
+    .btn{
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+    .input{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .p{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    } */
+/* } */
