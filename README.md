@@ -1,7 +1,7 @@
 # download details
 - please upon downloading uncompress these 3 folders
 1. .vscode
-2.images
+2. images
 3. mail
 - and import the database named case01
 
