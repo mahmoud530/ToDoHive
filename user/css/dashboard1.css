@@ -74,6 +74,46 @@
     
         transition: 1s;
     }
+
+.add-btn1 {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    font-size: 15px;
+    height: 35px;
+    padding: 5px;
+    background-color: var(--primary-color-light);
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    border-radius: 6px;
+
+    transition: 1s;
+
+}
+.add-btn2 {
+    position: absolute;
+    right: 16%;
+    top: 30px;
+    font-size: 15px;
+    height: 35px;
+    padding: 5px;
+    background-color: var(--primary-color-light);
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    border-radius: 6px;
+
+    transition: 1s;
+}
     
 
 body {
