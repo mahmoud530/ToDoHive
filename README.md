@@ -27,11 +27,13 @@
 
 - any user can access the task details, which is a page that contains all the data about the task and who the assignee and the reporter are and anyone can add comments, upload files along with their comments, or download already commented files, also the commenter can delete only the comments they added
 
--a reporter or an assignee can both edit task status or task priority
+- a reporter or an assignee can both edit task status or task priority
 
 - the assignee can re-assign a task through the share task icon on the top right where he gets a list with any member except himself
 
--the project contains search bar on projects and a search bar on sprints, along with a filter on task priorities
+- the project contains search bar on projects and a search bar on sprints, along with a filter on task priorities
+
+- a team leader have the option to upgrade his subscription plan
 
 - lastly a profile page where a user gets a display of all his tasks and can change his password
 
